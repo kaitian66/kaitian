@@ -1,6 +1,12 @@
 [
-    {"question": "活字印刷","answer": "畢昇"},
-    {"question": "屈原姓氏","answer": "羋"},
+    {
+        "question": "活字印刷",
+        "answer": "畢昇"
+    },
+    {
+        "question": "屈原姓氏",
+        "answer": "羋"
+    },
     {
         "question": "武則天改國號",
         "answer": "周"
@@ -8,5 +14,5 @@
     {
         "question": "樑上君子",
         "answer": "竊賊"
-    },
+    }
 ]
