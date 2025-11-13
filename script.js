@@ -7,7 +7,10 @@ fetch('data.json')
       const resultsDiv = document.getElementById('results');
       resultsDiv.innerHTML = '';
 
-      if (!keyword) return;
+      if (!keyword) {
+        document.body.style.overflowY = 'hidden';
+        return;
+      }
 
       const matches = data.filter(item => item.question.includes(keyword));
 
@@ -25,6 +28,8 @@ fetch('data.json')
           resultsDiv.appendChild(pA);
         });
       }
+
+      document.body.style.overflowY = 'auto';
     }
 
     document.getElementById('searchButton').addEventListener('click', doSearch);
