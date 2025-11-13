@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     background-image: url('images/bg.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: right top;
     background-repeat: no-repeat;
     filter: brightness(1.1) contrast(1.1) saturate(1.2) hue-rotate(10deg);
     overflow: hidden;
