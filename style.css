@@ -9,7 +9,8 @@ body {
     filter: brightness(1.05) contrast(1.1);
     display: flex;
     justify-content: center;
-    padding-top: 80px;
+    align-items: flex-start;
+    padding-top: 120px;
     min-height: 100vh;
     overflow-x: hidden;
 }
