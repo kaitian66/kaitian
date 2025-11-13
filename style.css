@@ -58,12 +58,6 @@ button:hover {
     line-height: 1.6;
 }
 
-@keyframes floating {
-    0% { transform: translateY(0) translateX(0); opacity: 0.4; }
-    50% { transform: translateY(-40px) translateX(20px); opacity: 1; }
-    100% { transform: translateY(0) translateX(0); opacity: 0.4; }
-}
-
 .glow {
     position: fixed;
     width: 8px;
@@ -73,6 +67,12 @@ button:hover {
     box-shadow: 0 0 12px rgba(255,255,255,0.9);
     animation: floating 4s ease-in-out infinite;
     pointer-events: none;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0) translateX(0); opacity: 0.4; }
+    50% { transform: translateY(-40px) translateX(20px); opacity: 1; }
+    100% { transform: translateY(0) translateX(0); opacity: 0.4; }
 }
 
 .glow:nth-child(1) { top: 20%; left: 30%; animation-duration: 5s; }
