@@ -7,9 +7,7 @@ fetch('data.json')
       const resultsDiv = document.getElementById('results');
       resultsDiv.innerHTML = '';
 
-      if (!keyword) {
-        return;
-      }
+      if (!keyword) return;
 
       const matches = data.filter(item => item.question.includes(keyword));
 
@@ -41,6 +39,7 @@ fetch('data.json')
     document.getElementById('searchInput').addEventListener('input', doSearch);
 
   })
-  .catch(() => {
+  .catch(err => {
+    console.error('讀取題庫失敗：', err);
     document.getElementById('results').textContent = '資料讀取錯誤';
   });
