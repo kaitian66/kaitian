@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-image: url('images/bg.jpg');
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
     background-color: #000;
@@ -13,6 +13,7 @@ body {
     padding-top: 80px;
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .container {
