@@ -1,14 +1,18 @@
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
+    const searchBtn = document.getElementById('searchButton');
     const input = document.getElementById('searchInput');
     const resultsDiv = document.getElementById('results');
 
-    input.addEventListener('input', () => {
+    searchBtn.addEventListener('click', () => {
       const keyword = input.value.trim();
       resultsDiv.innerHTML = '';
 
-      if (!keyword) return;
+      if (!keyword) {
+        resultsDiv.textContent = '請輸入搜尋關鍵字。';
+        return;
+      }
 
       const matches = data.filter(item => item.question.includes(keyword));
 
@@ -27,6 +31,6 @@ fetch('data.json')
       });
     });
   })
-  .catch(err => {
+  .catch(() => {
     document.getElementById('results').textContent = '資料讀取錯誤';
   });
