@@ -57,7 +57,6 @@ body::before {
 .glow:nth-child(3) { top: 70%; left: 40%; animation-duration: 4.5s; }
 .glow:nth-child(4) { top: 30%; left: 75%; animation-duration: 7s; }
 
-/* ====== 讓答題器往上移動 120px ====== */
 .container {
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
@@ -68,7 +67,7 @@ body::before {
     width: 90%;
     max-width: 420px;
     z-index: 1;
-    transform: translateY(-120px);
+    transform: translateY(-260px);
 }
 
 .container h1 {
