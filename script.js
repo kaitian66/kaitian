@@ -5,10 +5,10 @@ fetch('data.json')
     function doSearch() {
       const keyword = document.getElementById('searchInput').value.trim();
       const resultsDiv = document.getElementById('results');
-      resultsDiv.innerHTML = ''; // 清空之前結果
+      resultsDiv.innerHTML = ''; // 清空之前的結果
 
       if (!keyword) {
-        resultsDiv.textContent = '請輸入搜尋關鍵字。';
+        // 若沒輸入就清空即可，不顯示提示
         return;
       }
 
@@ -30,16 +30,19 @@ fetch('data.json')
       }
     }
 
-    // 點擊按鈕搜尋
+    // 點擊按鈕搜尋（保留）
     document.getElementById('searchButton').addEventListener('click', doSearch);
 
-    // Enter 觸發搜尋（100% 會動）
+    // Enter 搜尋（保留）
     document.getElementById('searchInput').addEventListener('keyup', function (event) {
       if (event.key === 'Enter') {
         event.preventDefault();
-        doSearch(); // 直接搜尋
+        doSearch();
       }
     });
+
+    // ⛳ **即時搜尋（輸入就自動搜尋）**
+    document.getElementById('searchInput').addEventListener('input', doSearch);
 
   })
   .catch(err => {
