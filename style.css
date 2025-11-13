@@ -68,6 +68,7 @@ button:hover {
     margin-top: 20px;
     text-align: left;
     line-height: 1.6;
+    min-height: 0;
 }
 
 .glow {
