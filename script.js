@@ -2,7 +2,6 @@ fetch('data.json')
   .then(response => response.json())
   .then(data => {
 
-    // 專門的搜尋函式（滑鼠按鈕 & ENTER 都會用到）
     function doSearch() {
       const keyword = document.getElementById('searchInput').value.trim();
       const resultsDiv = document.getElementById('results');
@@ -34,11 +33,11 @@ fetch('data.json')
     // 點擊按鈕搜尋
     document.getElementById('searchButton').addEventListener('click', doSearch);
 
-    // 按 Enter 觸發搜尋
-    document.getElementById('searchInput').addEventListener('keydown', function (event) {
+    // Enter 觸發搜尋（100% 會動）
+    document.getElementById('searchInput').addEventListener('keyup', function (event) {
       if (event.key === 'Enter') {
-        event.preventDefault(); // 防止預設提交
-        doSearch(); // 執行搜尋
+        event.preventDefault();
+        doSearch(); // 直接搜尋
       }
     });
 
