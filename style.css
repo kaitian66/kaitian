@@ -10,7 +10,7 @@ body {
     background-position: right top;
     background-repeat: no-repeat;
     filter: brightness(1.1) contrast(1.1) saturate(1.2) hue-rotate(10deg);
-    overflow: hidden;
+    overflow-x: hidden;
     padding-top: 40px;
 }
 
@@ -59,7 +59,6 @@ body::before {
     width: 90%;
     max-width: 420px;
     z-index: 1;
-    height: 180px;
 }
 
 .container h1 {
