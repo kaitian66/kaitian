@@ -41,11 +41,6 @@ fetch('data.json')
     document.getElementById('searchInput').addEventListener('input', doSearch);
 
   })
-  .catch(err => {
+  .catch(() => {
     document.getElementById('results').textContent = '資料讀取錯誤';
   });
-
-document.getElementById("reportOpen").addEventListener("click", () => {
-    const box = document.getElementById("reportBox");
-    box.style.display = box.style.display === "block" ? "none" : "block";
-});
