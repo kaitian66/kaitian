@@ -67,7 +67,7 @@ body::before {
     width: 90%;
     max-width: 420px;
     z-index: 1;
-    transform: translateY(-260px);
+    transform: translateY(-200px);
 }
 
 .container h1 {
