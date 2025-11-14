@@ -7,10 +7,7 @@ fetch('data.json')
       const resultsDiv = document.getElementById('results');
       resultsDiv.innerHTML = '';
 
-      if (!keyword) {
-        document.body.style.overflowY = 'hidden';
-        return;
-      }
+      if (!keyword) return;
 
       const matches = data.filter(item => item.question.includes(keyword));
 
@@ -28,11 +25,9 @@ fetch('data.json')
           resultsDiv.appendChild(pA);
         });
       }
-
-      document.body.style.overflowY = 'auto';
     }
 
-    document.getElementById('searchButton').addEventListener('click', doSearch);
+    document.getElementById('searchInput').addEventListener('input', doSearch);
 
     document.getElementById('searchInput').addEventListener('keyup', function (event) {
       if (event.key === 'Enter') {
@@ -41,10 +36,8 @@ fetch('data.json')
       }
     });
 
-    document.getElementById('searchInput').addEventListener('input', doSearch);
-
   })
   .catch(err => {
-    console.error('讀取題庫失敗：', err);
+    console.error('讀取失敗：', err);
     document.getElementById('results').textContent = '資料讀取錯誤';
   });
