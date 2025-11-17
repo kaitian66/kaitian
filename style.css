@@ -92,3 +92,20 @@ button:hover {
 .glow:nth-child(2) { top: 45%; left: 60%; animation-duration: 6s; }
 .glow:nth-child(3) { top: 70%; left: 40%; animation-duration: 4.5s; }
 .glow:nth-child(4) { top: 30%; left: 75%; animation-duration: 7s; }
+
+@media screen and (max-width: 768px) {
+    body {
+        background-position: center top;
+        background-size: cover;
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
